@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4f13e43f342244498dcdeedae5594770" Name="Diagram1">
+        <EntityTypeShape EntityType="GamingPlatformDB_v4Model.GameBall" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamingPlatformDB_v4Model.GameMine" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamingPlatformDB_v4Model.GameSwitch" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamingPlatformDB_v4Model.GameTetri" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamingPlatformDB_v4Model.MemoryCardsGame" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamingPlatformDB_v4Model.Player" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamingPlatformDB_v4Model.SnakeGame" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamingPlatformDB_v4Model.TicTacMatch" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <AssociationConnector Association="GamingPlatformDB_v4Model.FK__GameBall__IDUser__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="GamingPlatformDB_v4Model.FK__GameMine__IDUser__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="GamingPlatformDB_v4Model.FK__GameSwitc__IDUse__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="GamingPlatformDB_v4Model.FK__GameTetri__IDUse__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="GamingPlatformDB_v4Model.FK__MemoryCar__IDUse__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="GamingPlatformDB_v4Model.FK__SnakeGame__IDUse__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="GamingPlatformDB_v4Model.FK__TicTacMat__IDUse__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="GamingPlatformDB_v4Model.FK__TicTacMat__IDUse__24927208" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

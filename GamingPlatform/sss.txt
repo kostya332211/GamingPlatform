@@ -1,0 +1,19 @@
+  <Label Content="Имя" TextBlock.TextAlignment="Center" Margin="162,54,579,0" VerticalAlignment="Top" Height="36" FontSize="20" FontStyle="Italic" Foreground="#ffd1d1"/>
+            <Label Content="Логин"  HorizontalAlignment="Left" Margin="162,112,0,0" VerticalAlignment="Top" Height="36" Width="77" FontSize="20" FontStyle="Italic" Foreground="#ffd1d1"/>
+            <Label Content="Пароль"  HorizontalAlignment="Left" Margin="162,170,0,0" VerticalAlignment="Top" Height="36" Width="91" FontSize="20" FontStyle="Italic" Foreground="#ffd1d1"/>
+            <Label Content="Повторите пароль"  HorizontalAlignment="Left" Margin="117,233,0,0" VerticalAlignment="Top" Height="36" Width="196" FontSize="20" FontStyle="Italic" Foreground="#ffd1d1"/>
+            <Label Content="Логин"  HorizontalAlignment="Left" Margin="475,51,0,0" VerticalAlignment="Top" Height="36" Width="77" FontSize="20" FontStyle="Italic" Foreground="#ffd1d1"/>
+            <Label Content="Пароль" HorizontalAlignment="Left" Margin="472,112,0,0" VerticalAlignment="Top" Height="36" Width="91" FontSize="20" FontStyle="Italic" Foreground="#ffd1d1" RenderTransformOrigin="0.5,0.5">
+            </Label>
+            <TextBox x:Name="RegName" Opacity="0.2" HorizontalAlignment="Left" Height="27" Margin="117,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="20" Width="200"/>
+            <TextBox x:Name="RegLogin" Opacity="0.2" HorizontalAlignment="Left" Height="27" Margin="117,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="200"/>
+            <PasswordBox x:Name="RegPass" Opacity="0.2" HorizontalAlignment="Left" Height="27" Margin="117,206,0,0"  VerticalAlignment="Top" FontSize="20" Width="200"/>
+            <PasswordBox x:Name="RegRepass" Opacity="0.2" HorizontalAlignment="Left" Height="27" Margin="117,274,0,0"  VerticalAlignment="Top" FontSize="20" Width="200"/>
+            <TextBox x:Name="SignLogin" Opacity="0.2" HorizontalAlignment="Left" Height="27" Margin="427,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="200"/>
+            <PasswordBox x:Name="SignPass" Opacity="0.2" HorizontalAlignment="Left" Height="27" Margin="427,148,0,0"  VerticalAlignment="Top" FontSize="20" Width="200"/>
+            <Button  x:Name="Registr" Opacity="0.5" Content="Зарегистрироваться" BorderBrush="#f2ebec" Background="#f2ebec" Foreground="Black" TextBlock.FontSize="20" FontStyle="Oblique" HorizontalAlignment="Left" Margin="117,327,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="-0.389,-0.936" Height="46" Click="Registr_Click"/>
+            <Button x:Name="Sign" Opacity="0.5"  Background="#f2ebec" BorderBrush="#f2ebec" Foreground="Black" Content="Войти"  HorizontalAlignment="Left" TextBlock.FontSize="20" FontStyle="Oblique" Margin="427,327,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="-0.389,-0.936" Height="46" Click="Sign_Click"/>
+            <Button x:Name="EXIT"   Opacity="0.5"  Background="#f2ebec" BorderBrush="#f2ebec" Foreground="Black" Content="Выйти"  HorizontalAlignment="Left" TextBlock.FontSize="30"  VerticalAlignment="Top" Width="139"  Margin="638,10,0,0" Height="60" FontStyle="Oblique" Click="EXIT_Click"></Button>
+            <Button Content="PlayChess" FontSize="30" HorizontalAlignment="Left" Margin="473,243,0,0" VerticalAlignment="Top" Width="154" Height="58" Click="Button_Click"/>
+            <Button Content="MemoryCards" HorizontalAlignment="Left" Margin="638,186,0,0" VerticalAlignment="Top" Width="139" Height="47" Click="Button_Click_1"/>
+

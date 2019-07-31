@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PlatformDBModel1Container" CdmEntityContainer="PlatformDBEntities1">
+    <EntitySetMapping Name="TIC_TAC_TOE">
+      <EntityTypeMapping TypeName="PlatformDBModel1.TIC_TAC_TOE">
+        <MappingFragment StoreEntitySet="TIC_TAC_TOE">
+          <ScalarProperty Name="GameID" ColumnName="GameID" />
+          <ScalarProperty Name="USER1ID" ColumnName="USER1ID" />
+          <ScalarProperty Name="USER2ID" ColumnName="USER2ID" />
+          <ScalarProperty Name="FEN" ColumnName="FEN" />
+          <ScalarProperty Name="StatusGame" ColumnName="StatusGame" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="PlatformDBModel1.USER">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

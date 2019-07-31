@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DBGamingPlatformModelContainer" CdmEntityContainer="DBGamingPlatformEntities">
+    <EntitySetMapping Name="Game01">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.Game01">
+        <MappingFragment StoreEntitySet="Game01">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game02">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.Game02">
+        <MappingFragment StoreEntitySet="Game02">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game03">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.Game03">
+        <MappingFragment StoreEntitySet="Game03">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game04">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.Game04">
+        <MappingFragment StoreEntitySet="Game04">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game05">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.Game05">
+        <MappingFragment StoreEntitySet="Game05">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemoryCardsGames">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.MemoryCardsGame">
+        <MappingFragment StoreEntitySet="MemoryCardsGame">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="IDPlayer" ColumnName="IDPlayer" />
+          <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="RegistrDate" ColumnName="RegistrDate" />
+          <ScalarProperty Name="SaltUser" ColumnName="SaltUser" />
+          <ScalarProperty Name="HashUser" ColumnName="HashUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SnakeGames">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.SnakeGame">
+        <MappingFragment StoreEntitySet="SnakeGame">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GameChesses">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.GameChess">
+        <MappingFragment StoreEntitySet="GameChess">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalWins" ColumnName="TotalWins" />
+          <ScalarProperty Name="TotalLose" ColumnName="TotalLose" />
+          <ScalarProperty Name="TotalDraw" ColumnName="TotalDraw" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GameTicTacs">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.GameTicTac">
+        <MappingFragment StoreEntitySet="GameTicTac">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalWins" ColumnName="TotalWins" />
+          <ScalarProperty Name="TotalLose" ColumnName="TotalLose" />
+          <ScalarProperty Name="TotalDraw" ColumnName="TotalDraw" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MatchChesses">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.MatchChess">
+        <MappingFragment StoreEntitySet="MatchChess">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="FEN" ColumnName="FEN" />
+          <ScalarProperty Name="StatusMatch" ColumnName="StatusMatch" />
+          <ScalarProperty Name="LoginFirstPlayer" ColumnName="LoginFirstPlayer" />
+          <ScalarProperty Name="LoginSecondPlayer" ColumnName="LoginSecondPlayer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MatchTicTacs">
+      <EntityTypeMapping TypeName="DBGamingPlatformModel.MatchTicTac">
+        <MappingFragment StoreEntitySet="MatchTicTac">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="FEN" ColumnName="FEN" />
+          <ScalarProperty Name="StatusMatch" ColumnName="StatusMatch" />
+          <ScalarProperty Name="LoginFirstPlayer" ColumnName="LoginFirstPlayer" />
+          <ScalarProperty Name="LoginSecondPlayer" ColumnName="LoginSecondPlayer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

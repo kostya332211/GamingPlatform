@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище GamingPlatformDB_v4ModelContainer" CdmEntityContainer="GamingPlatformDB_v4Entities">
+    <EntitySetMapping Name="GameBalls">
+      <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.GameBall">
+        <MappingFragment StoreEntitySet="GameBall">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GameMines">
+      <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.GameMine">
+        <MappingFragment StoreEntitySet="GameMine">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GameSwitches">
+      <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.GameSwitch">
+        <MappingFragment StoreEntitySet="GameSwitch">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GameTetris">
+      <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.GameTetri">
+        <MappingFragment StoreEntitySet="GameTetris">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemoryCardsGames">
+      <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.MemoryCardsGame">
+        <MappingFragment StoreEntitySet="MemoryCardsGame">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="IDPlayer" ColumnName="IDPlayer" />
+          <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="RegistrDate" ColumnName="RegistrDate" />
+          <ScalarProperty Name="SaltUser" ColumnName="SaltUser" />
+          <ScalarProperty Name="HashUser" ColumnName="HashUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SnakeGames">
+      <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.SnakeGame">
+        <MappingFragment StoreEntitySet="SnakeGame">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TicTacMatches">
+      <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.TicTacMatch">
+        <MappingFragment StoreEntitySet="TicTacMatch">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser1" ColumnName="IDUser1" />
+          <ScalarProperty Name="IDUser2" ColumnName="IDUser2" />
+          <ScalarProperty Name="StatusMatch" ColumnName="StatusMatch" />
+          <ScalarProperty Name="FEN" ColumnName="FEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

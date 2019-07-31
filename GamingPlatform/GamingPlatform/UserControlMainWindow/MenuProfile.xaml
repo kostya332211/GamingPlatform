@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="GamingPlatform.UserControlMainWindow.MenuProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GamingPlatform.UserControlMainWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Grid  Grid.Column="7" Grid.Row="0" Margin="0,10,10,0">
+            <Image Source="/GamingPlatform;component/Assets/home.png" Stretch="Fill"/>
+            <Button Opacity="0" Click="GoToHome"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.ColumnSpan="8" Grid.RowSpan="5" Margin="29,19,28,30" Background="#FFE5E5">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="22">Имя :</Label>
+                    <Label x:Name="nameField" FontSize="22"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="22">Логин :</Label>
+                    <Label x:Name="loginField" FontSize="22"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="22">Дата регистрации :</Label>
+                    <Label x:Name="dateField" FontSize="22"></Label>
+                </StackPanel>
+                <Grid Margin="120,10,120,0" Height="50">
+                    <Label x:Name="labelChangePassword" FontSize="30" Foreground="Gray">Смена пароля</Label>
+                    <Button x:Name="buttonChangePassword" Opacity="0" Cursor="Hand" Mouse.MouseEnter="buttonChangePassword_MouseEnter" Mouse.MouseLeave="buttonChangePassword_MouseLeave" Click="buttonChangePassword_Click"></Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
+
+
+    </Grid>
+</UserControl>

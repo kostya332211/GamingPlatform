@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище GamingPlatformDB_v4Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GameBall">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUser" Type="int" />
+          <Property Name="BestScore" Type="int" />
+        </EntityType>
+        <EntityType Name="GameMine">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUser" Type="int" />
+          <Property Name="BestScore" Type="int" />
+        </EntityType>
+        <EntityType Name="GameSwitch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUser" Type="int" />
+          <Property Name="BestScore" Type="int" />
+        </EntityType>
+        <EntityType Name="GameTetris">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUser" Type="int" />
+          <Property Name="BestScore" Type="int" />
+        </EntityType>
+        <EntityType Name="MemoryCardsGame">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUser" Type="int" />
+          <Property Name="BestScore" Type="int" />
+        </EntityType>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="IDPlayer" />
+          </Key>
+          <Property Name="IDPlayer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoginUser" Type="varchar" MaxLength="50" />
+          <Property Name="NameUser" Type="varchar" MaxLength="50" />
+          <Property Name="RegistrDate" Type="varchar" MaxLength="50" />
+          <Property Name="SaltUser" Type="varchar" MaxLength="50" />
+          <Property Name="HashUser" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SnakeGame">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUser" Type="int" />
+          <Property Name="BestScore" Type="int" />
+        </EntityType>
+        <EntityType Name="TicTacMatch">
+          <Key>
+            <PropertyRef Name="IDTable" />
+          </Key>
+          <Property Name="IDTable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUser1" Type="int" />
+          <Property Name="IDUser2" Type="int" />
+          <Property Name="StatusMatch" Type="int" />
+          <Property Name="FEN" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__GameBall__IDUser__20C1E124">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="GameBall" Type="Self.GameBall" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="GameBall">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameMine__IDUser__1DE57479">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="GameMine" Type="Self.GameMine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="GameMine">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameSwitc__IDUse__1B0907CE">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="GameSwitch" Type="Self.GameSwitch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="GameSwitch">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameTetri__IDUse__182C9B23">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="GameTetris" Type="Self.GameTetris" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="GameTetris">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemoryCar__IDUse__15502E78">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="MemoryCardsGame" Type="Self.MemoryCardsGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="MemoryCardsGame">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SnakeGame__IDUse__1273C1CD">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="SnakeGame" Type="Self.SnakeGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="SnakeGame">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TicTacMat__IDUse__239E4DCF">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="TicTacMatch" Type="Self.TicTacMatch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="TicTacMatch">
+              <PropertyRef Name="IDUser1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TicTacMat__IDUse__24927208">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="TicTacMatch" Type="Self.TicTacMatch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="TicTacMatch">
+              <PropertyRef Name="IDUser2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище GamingPlatformDB_v4ModelContainer">
+          <EntitySet Name="GameBall" EntityType="Self.GameBall" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameMine" EntityType="Self.GameMine" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameSwitch" EntityType="Self.GameSwitch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameTetris" EntityType="Self.GameTetris" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MemoryCardsGame" EntityType="Self.MemoryCardsGame" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SnakeGame" EntityType="Self.SnakeGame" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TicTacMatch" EntityType="Self.TicTacMatch" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__GameBall__IDUser__20C1E124" Association="Self.FK__GameBall__IDUser__20C1E124">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="GameBall" EntitySet="GameBall" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameMine__IDUser__1DE57479" Association="Self.FK__GameMine__IDUser__1DE57479">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="GameMine" EntitySet="GameMine" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameSwitc__IDUse__1B0907CE" Association="Self.FK__GameSwitc__IDUse__1B0907CE">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="GameSwitch" EntitySet="GameSwitch" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameTetri__IDUse__182C9B23" Association="Self.FK__GameTetri__IDUse__182C9B23">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="GameTetris" EntitySet="GameTetris" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemoryCar__IDUse__15502E78" Association="Self.FK__MemoryCar__IDUse__15502E78">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="MemoryCardsGame" EntitySet="MemoryCardsGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SnakeGame__IDUse__1273C1CD" Association="Self.FK__SnakeGame__IDUse__1273C1CD">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="SnakeGame" EntitySet="SnakeGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TicTacMat__IDUse__239E4DCF" Association="Self.FK__TicTacMat__IDUse__239E4DCF">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="TicTacMatch" EntitySet="TicTacMatch" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TicTacMat__IDUse__24927208" Association="Self.FK__TicTacMat__IDUse__24927208">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="TicTacMatch" EntitySet="TicTacMatch" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GamingPlatformDB_v4Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GameBall">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="Int32" />
+          <Property Name="BestScore" Type="Int32" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__GameBall__IDUser__20C1E124" FromRole="GameBall" ToRole="Player" />
+        </EntityType>
+        <EntityType Name="GameMine">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="Int32" />
+          <Property Name="BestScore" Type="Int32" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__GameMine__IDUser__1DE57479" FromRole="GameMine" ToRole="Player" />
+        </EntityType>
+        <EntityType Name="GameSwitch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="Int32" />
+          <Property Name="BestScore" Type="Int32" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__GameSwitc__IDUse__1B0907CE" FromRole="GameSwitch" ToRole="Player" />
+        </EntityType>
+        <EntityType Name="GameTetri">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="Int32" />
+          <Property Name="BestScore" Type="Int32" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__GameTetri__IDUse__182C9B23" FromRole="GameTetris" ToRole="Player" />
+        </EntityType>
+        <EntityType Name="MemoryCardsGame">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="Int32" />
+          <Property Name="BestScore" Type="Int32" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__MemoryCar__IDUse__15502E78" FromRole="MemoryCardsGame" ToRole="Player" />
+        </EntityType>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="IDPlayer" />
+          </Key>
+          <Property Name="IDPlayer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NameUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RegistrDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SaltUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HashUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="GameBalls" Relationship="Self.FK__GameBall__IDUser__20C1E124" FromRole="Player" ToRole="GameBall" />
+          <NavigationProperty Name="GameMines" Relationship="Self.FK__GameMine__IDUser__1DE57479" FromRole="Player" ToRole="GameMine" />
+          <NavigationProperty Name="GameSwitches" Relationship="Self.FK__GameSwitc__IDUse__1B0907CE" FromRole="Player" ToRole="GameSwitch" />
+          <NavigationProperty Name="GameTetris" Relationship="Self.FK__GameTetri__IDUse__182C9B23" FromRole="Player" ToRole="GameTetris" />
+          <NavigationProperty Name="MemoryCardsGames" Relationship="Self.FK__MemoryCar__IDUse__15502E78" FromRole="Player" ToRole="MemoryCardsGame" />
+          <NavigationProperty Name="SnakeGames" Relationship="Self.FK__SnakeGame__IDUse__1273C1CD" FromRole="Player" ToRole="SnakeGame" />
+          <NavigationProperty Name="TicTacMatches" Relationship="Self.FK__TicTacMat__IDUse__239E4DCF" FromRole="Player" ToRole="TicTacMatch" />
+          <NavigationProperty Name="TicTacMatches1" Relationship="Self.FK__TicTacMat__IDUse__24927208" FromRole="Player" ToRole="TicTacMatch" />
+        </EntityType>
+        <EntityType Name="SnakeGame">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="Int32" />
+          <Property Name="BestScore" Type="Int32" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__SnakeGame__IDUse__1273C1CD" FromRole="SnakeGame" ToRole="Player" />
+        </EntityType>
+        <EntityType Name="TicTacMatch">
+          <Key>
+            <PropertyRef Name="IDTable" />
+          </Key>
+          <Property Name="IDTable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser1" Type="Int32" />
+          <Property Name="IDUser2" Type="Int32" />
+          <Property Name="StatusMatch" Type="Int32" />
+          <Property Name="FEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__TicTacMat__IDUse__239E4DCF" FromRole="TicTacMatch" ToRole="Player" />
+          <NavigationProperty Name="Player1" Relationship="Self.FK__TicTacMat__IDUse__24927208" FromRole="TicTacMatch" ToRole="Player" />
+        </EntityType>
+        <Association Name="FK__GameBall__IDUser__20C1E124">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="GameBall" Type="Self.GameBall" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="GameBall">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameMine__IDUser__1DE57479">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="GameMine" Type="Self.GameMine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="GameMine">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameSwitc__IDUse__1B0907CE">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="GameSwitch" Type="Self.GameSwitch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="GameSwitch">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameTetri__IDUse__182C9B23">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="GameTetris" Type="Self.GameTetri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="GameTetris">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemoryCar__IDUse__15502E78">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="MemoryCardsGame" Type="Self.MemoryCardsGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="MemoryCardsGame">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SnakeGame__IDUse__1273C1CD">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="SnakeGame" Type="Self.SnakeGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="SnakeGame">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TicTacMat__IDUse__239E4DCF">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="TicTacMatch" Type="Self.TicTacMatch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="TicTacMatch">
+              <PropertyRef Name="IDUser1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TicTacMat__IDUse__24927208">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="TicTacMatch" Type="Self.TicTacMatch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="IDPlayer" />
+            </Principal>
+            <Dependent Role="TicTacMatch">
+              <PropertyRef Name="IDUser2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GamingPlatformDB_v4Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GameBalls" EntityType="Self.GameBall" />
+          <EntitySet Name="GameMines" EntityType="Self.GameMine" />
+          <EntitySet Name="GameSwitches" EntityType="Self.GameSwitch" />
+          <EntitySet Name="GameTetris" EntityType="Self.GameTetri" />
+          <EntitySet Name="MemoryCardsGames" EntityType="Self.MemoryCardsGame" />
+          <EntitySet Name="Players" EntityType="Self.Player" />
+          <EntitySet Name="SnakeGames" EntityType="Self.SnakeGame" />
+          <EntitySet Name="TicTacMatches" EntityType="Self.TicTacMatch" />
+          <AssociationSet Name="FK__GameBall__IDUser__20C1E124" Association="Self.FK__GameBall__IDUser__20C1E124">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="GameBall" EntitySet="GameBalls" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameMine__IDUser__1DE57479" Association="Self.FK__GameMine__IDUser__1DE57479">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="GameMine" EntitySet="GameMines" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameSwitc__IDUse__1B0907CE" Association="Self.FK__GameSwitc__IDUse__1B0907CE">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="GameSwitch" EntitySet="GameSwitches" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameTetri__IDUse__182C9B23" Association="Self.FK__GameTetri__IDUse__182C9B23">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="GameTetris" EntitySet="GameTetris" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemoryCar__IDUse__15502E78" Association="Self.FK__MemoryCar__IDUse__15502E78">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="MemoryCardsGame" EntitySet="MemoryCardsGames" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SnakeGame__IDUse__1273C1CD" Association="Self.FK__SnakeGame__IDUse__1273C1CD">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="SnakeGame" EntitySet="SnakeGames" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TicTacMat__IDUse__239E4DCF" Association="Self.FK__TicTacMat__IDUse__239E4DCF">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="TicTacMatch" EntitySet="TicTacMatches" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TicTacMat__IDUse__24927208" Association="Self.FK__TicTacMat__IDUse__24927208">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="TicTacMatch" EntitySet="TicTacMatches" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище GamingPlatformDB_v4ModelContainer" CdmEntityContainer="GamingPlatformDB_v4Entities">
+          <EntitySetMapping Name="GameBalls">
+            <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.GameBall">
+              <MappingFragment StoreEntitySet="GameBall">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameMines">
+            <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.GameMine">
+              <MappingFragment StoreEntitySet="GameMine">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameSwitches">
+            <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.GameSwitch">
+              <MappingFragment StoreEntitySet="GameSwitch">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameTetris">
+            <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.GameTetri">
+              <MappingFragment StoreEntitySet="GameTetris">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MemoryCardsGames">
+            <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.MemoryCardsGame">
+              <MappingFragment StoreEntitySet="MemoryCardsGame">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Players">
+            <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.Player">
+              <MappingFragment StoreEntitySet="Player">
+                <ScalarProperty Name="IDPlayer" ColumnName="IDPlayer" />
+                <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+                <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+                <ScalarProperty Name="RegistrDate" ColumnName="RegistrDate" />
+                <ScalarProperty Name="SaltUser" ColumnName="SaltUser" />
+                <ScalarProperty Name="HashUser" ColumnName="HashUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SnakeGames">
+            <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.SnakeGame">
+              <MappingFragment StoreEntitySet="SnakeGame">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TicTacMatches">
+            <EntityTypeMapping TypeName="GamingPlatformDB_v4Model.TicTacMatch">
+              <MappingFragment StoreEntitySet="TicTacMatch">
+                <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+                <ScalarProperty Name="IDUser1" ColumnName="IDUser1" />
+                <ScalarProperty Name="IDUser2" ColumnName="IDUser2" />
+                <ScalarProperty Name="StatusMatch" ColumnName="StatusMatch" />
+                <ScalarProperty Name="FEN" ColumnName="FEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

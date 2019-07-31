@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище UsersDBModelContainer" CdmEntityContainer="UsersDBEntities1">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="UsersDBModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="IDPlayer" ColumnName="IDPlayer" />
+          <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="RegistrDate" ColumnName="RegistrDate" />
+          <ScalarProperty Name="SaltUser" ColumnName="SaltUser" />
+          <ScalarProperty Name="HashUser" ColumnName="HashUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

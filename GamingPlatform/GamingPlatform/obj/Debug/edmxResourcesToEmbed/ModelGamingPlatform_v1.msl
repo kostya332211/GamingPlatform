@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище GamingPlatformModel1Container" CdmEntityContainer="GamingPlatformEntities1">
+    <EntitySetMapping Name="UserAccounts">
+      <EntityTypeMapping TypeName="GamingPlatformModel1.UserAccount">
+        <MappingFragment StoreEntitySet="UserAccount">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+          <ScalarProperty Name="HashUser" ColumnName="HashUser" />
+          <ScalarProperty Name="SaltUser" ColumnName="SaltUser" />
+          <ScalarProperty Name="RegistrDate" ColumnName="RegistrDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

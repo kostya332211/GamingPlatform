@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="GamingPlatform.UserControlMainWindow.Sign"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GamingPlatform.UserControlMainWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="425" d:DesignWidth="780">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="27"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="27*"/>
+
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="14" Background="Black" Opacity="0.5">
+            <StackPanel>
+                <Label Content="Вход" FontSize="20" Foreground="Wheat" HorizontalAlignment="Center"/>
+                <Label Content="Логин" FontSize="20" Foreground="Wheat" HorizontalAlignment="Center"/>
+                <TextBox x:Name="loginField" FontSize="20" Margin="20,0,20,0" TextChanged="loginField_TextChanged"/>
+                <Label Content="Пароль" FontSize="20" Foreground="Wheat" HorizontalAlignment="Center"/>
+                <PasswordBox x:Name="passwordField" FontSize="20" Margin="20,0,20,0"/>
+                <StackPanel Height="79" Width="390" Margin="10">
+                    <Button FontSize="20" Content="Войти" Margin="100,0,100,0" Click="GoSign" />
+                    <Button FontSize="20" Content="Нет аккаунта" Margin="100,10,100,0" Click="GoToReg"/>
+                </StackPanel>
+                <Button Content="Выход" FontSize="40" Margin="40,20,40,20" Click="ExitWindow"/>
+
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</UserControl>

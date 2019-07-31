@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="vvvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="IDPlayer" />
+    </Key>
+    <Property Name="IDPlayer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoginUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NameUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegistrDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SaltUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HashUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Game01" Relationship="Self.FK__Game01__IDUser__1B0907CE" FromRole="Player" ToRole="Game01" />
+    <NavigationProperty Name="Game02" Relationship="Self.FK__Game02__IDUser__1CF15040" FromRole="Player" ToRole="Game02" />
+    <NavigationProperty Name="Game03" Relationship="Self.FK__Game03__IDUser__117F9D94" FromRole="Player" ToRole="Game03" />
+    <NavigationProperty Name="Game04" Relationship="Self.FK__Game04__IDUser__1367E606" FromRole="Player" ToRole="Game04" />
+    <NavigationProperty Name="Game05" Relationship="Self.FK__Game05__IDUser__15502E78" FromRole="Player" ToRole="Game05" />
+    <NavigationProperty Name="MemoryCardsGames" Relationship="Self.FK__MemoryCar__IDUse__1920BF5C" FromRole="Player" ToRole="MemoryCardsGame" />
+    <NavigationProperty Name="SnakeGames" Relationship="Self.FK__SnakeGame__IDUse__173876EA" FromRole="Player" ToRole="SnakeGame" />
+  </EntityType>
+  <EntityType Name="Game01">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int32" />
+    <Property Name="TotalGames" Type="Int32" />
+    <Property Name="BestScore" Type="Int32" />
+    <NavigationProperty Name="Player" Relationship="Self.FK__Game01__IDUser__1B0907CE" FromRole="Game01" ToRole="Player" />
+  </EntityType>
+  <EntityType Name="Game02">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int32" />
+    <Property Name="TotalGames" Type="Int32" />
+    <Property Name="BestScore" Type="Int32" />
+    <NavigationProperty Name="Player" Relationship="Self.FK__Game02__IDUser__1CF15040" FromRole="Game02" ToRole="Player" />
+  </EntityType>
+  <EntityType Name="Game03">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int32" />
+    <Property Name="TotalGames" Type="Int32" />
+    <Property Name="BestScore" Type="Int32" />
+    <NavigationProperty Name="Player" Relationship="Self.FK__Game03__IDUser__117F9D94" FromRole="Game03" ToRole="Player" />
+  </EntityType>
+  <EntityType Name="Game04">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int32" />
+    <Property Name="TotalGames" Type="Int32" />
+    <Property Name="BestScore" Type="Int32" />
+    <NavigationProperty Name="Player" Relationship="Self.FK__Game04__IDUser__1367E606" FromRole="Game04" ToRole="Player" />
+  </EntityType>
+  <EntityType Name="Game05">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int32" />
+    <Property Name="TotalGames" Type="Int32" />
+    <Property Name="BestScore" Type="Int32" />
+    <NavigationProperty Name="Player" Relationship="Self.FK__Game05__IDUser__15502E78" FromRole="Game05" ToRole="Player" />
+  </EntityType>
+  <EntityType Name="MemoryCardsGame">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int32" />
+    <Property Name="TotalGames" Type="Int32" />
+    <Property Name="BestScore" Type="Int32" />
+    <NavigationProperty Name="Player" Relationship="Self.FK__MemoryCar__IDUse__1920BF5C" FromRole="MemoryCardsGame" ToRole="Player" />
+  </EntityType>
+  <EntityType Name="SnakeGame">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int32" />
+    <Property Name="TotalGames" Type="Int32" />
+    <Property Name="BestScore" Type="Int32" />
+    <NavigationProperty Name="Player" Relationship="Self.FK__SnakeGame__IDUse__173876EA" FromRole="SnakeGame" ToRole="Player" />
+  </EntityType>
+  <Association Name="FK__Game01__IDUser__1B0907CE">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game01" Type="Self.Game01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game01">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Game02__IDUser__1CF15040">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game02" Type="Self.Game02" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game02">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Game03__IDUser__117F9D94">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game03" Type="Self.Game03" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game03">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Game04__IDUser__1367E606">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game04" Type="Self.Game04" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game04">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Game05__IDUser__15502E78">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game05" Type="Self.Game05" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game05">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MemoryCar__IDUse__1920BF5C">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="MemoryCardsGame" Type="Self.MemoryCardsGame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="MemoryCardsGame">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SnakeGame__IDUse__173876EA">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="SnakeGame" Type="Self.SnakeGame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="SnakeGame">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="vvvEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Players" EntityType="Self.Player" />
+    <EntitySet Name="Game01" EntityType="Self.Game01" />
+    <EntitySet Name="Game02" EntityType="Self.Game02" />
+    <EntitySet Name="Game03" EntityType="Self.Game03" />
+    <EntitySet Name="Game04" EntityType="Self.Game04" />
+    <EntitySet Name="Game05" EntityType="Self.Game05" />
+    <EntitySet Name="MemoryCardsGames" EntityType="Self.MemoryCardsGame" />
+    <EntitySet Name="SnakeGames" EntityType="Self.SnakeGame" />
+    <AssociationSet Name="FK__Game01__IDUser__1B0907CE" Association="Self.FK__Game01__IDUser__1B0907CE">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="Game01" EntitySet="Game01" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Game02__IDUser__1CF15040" Association="Self.FK__Game02__IDUser__1CF15040">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="Game02" EntitySet="Game02" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Game03__IDUser__117F9D94" Association="Self.FK__Game03__IDUser__117F9D94">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="Game03" EntitySet="Game03" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Game04__IDUser__1367E606" Association="Self.FK__Game04__IDUser__1367E606">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="Game04" EntitySet="Game04" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Game05__IDUser__15502E78" Association="Self.FK__Game05__IDUser__15502E78">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="Game05" EntitySet="Game05" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MemoryCar__IDUse__1920BF5C" Association="Self.FK__MemoryCar__IDUse__1920BF5C">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="MemoryCardsGame" EntitySet="MemoryCardsGames" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SnakeGame__IDUse__173876EA" Association="Self.FK__SnakeGame__IDUse__173876EA">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="SnakeGame" EntitySet="SnakeGames" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

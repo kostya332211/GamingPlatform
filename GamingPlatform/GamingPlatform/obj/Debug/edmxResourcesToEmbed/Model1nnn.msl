@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище vvvModelContainer" CdmEntityContainer="vvvEntities">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="vvvModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="IDPlayer" ColumnName="IDPlayer" />
+          <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="RegistrDate" ColumnName="RegistrDate" />
+          <ScalarProperty Name="SaltUser" ColumnName="SaltUser" />
+          <ScalarProperty Name="HashUser" ColumnName="HashUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game01">
+      <EntityTypeMapping TypeName="vvvModel.Game01">
+        <MappingFragment StoreEntitySet="Game01">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game02">
+      <EntityTypeMapping TypeName="vvvModel.Game02">
+        <MappingFragment StoreEntitySet="Game02">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game03">
+      <EntityTypeMapping TypeName="vvvModel.Game03">
+        <MappingFragment StoreEntitySet="Game03">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game04">
+      <EntityTypeMapping TypeName="vvvModel.Game04">
+        <MappingFragment StoreEntitySet="Game04">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game05">
+      <EntityTypeMapping TypeName="vvvModel.Game05">
+        <MappingFragment StoreEntitySet="Game05">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemoryCardsGames">
+      <EntityTypeMapping TypeName="vvvModel.MemoryCardsGame">
+        <MappingFragment StoreEntitySet="MemoryCardsGame">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SnakeGames">
+      <EntityTypeMapping TypeName="vvvModel.SnakeGame">
+        <MappingFragment StoreEntitySet="SnakeGame">
+          <ScalarProperty Name="IDTable" ColumnName="IDTable" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="BestScore" ColumnName="BestScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

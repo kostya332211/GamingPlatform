@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище vvvModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "vvv.dbo.Game01" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Game01">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="TotalGames" Type="int" />
+    <Property Name="BestScore" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "vvv.dbo.Game02" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Game02">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="TotalGames" Type="int" />
+    <Property Name="BestScore" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "vvv.dbo.Game03" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Game03">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="TotalGames" Type="int" />
+    <Property Name="BestScore" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "vvv.dbo.Game04" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Game04">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="TotalGames" Type="int" />
+    <Property Name="BestScore" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "vvv.dbo.Game05" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Game05">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="TotalGames" Type="int" />
+    <Property Name="BestScore" Type="int" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "vvv.dbo.MemoryCardsGame" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="MemoryCardsGame">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="TotalGames" Type="int" />
+    <Property Name="BestScore" Type="int" />
+  </EntityType>
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="IDPlayer" />
+    </Key>
+    <Property Name="IDPlayer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginUser" Type="varchar" MaxLength="50" />
+    <Property Name="NameUser" Type="varchar" MaxLength="50" />
+    <Property Name="RegistrDate" Type="varchar" MaxLength="50" />
+    <Property Name="SaltUser" Type="varchar" MaxLength="50" />
+    <Property Name="HashUser" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "vvv.dbo.SnakeGame" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="SnakeGame">
+    <Key>
+      <PropertyRef Name="IDTable" />
+    </Key>
+    <Property Name="IDTable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="TotalGames" Type="int" />
+    <Property Name="BestScore" Type="int" />
+  </EntityType>
+  <Association Name="FK__Game01__IDUser__1B0907CE">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game01" Type="Self.Game01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game01">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Game02__IDUser__1CF15040">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game02" Type="Self.Game02" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game02">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Game03__IDUser__117F9D94">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game03" Type="Self.Game03" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game03">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Game04__IDUser__1367E606">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game04" Type="Self.Game04" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game04">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Game05__IDUser__15502E78">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="Game05" Type="Self.Game05" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="Game05">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MemoryCar__IDUse__1920BF5C">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="MemoryCardsGame" Type="Self.MemoryCardsGame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="MemoryCardsGame">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SnakeGame__IDUse__173876EA">
+    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Role="SnakeGame" Type="Self.SnakeGame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="IDPlayer" />
+      </Principal>
+      <Dependent Role="SnakeGame">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище vvvModelContainer">
+    <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Game01" EntityType="Self.Game01" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Game01].[IDTable] AS [IDTable], 
+    [Game01].[IDUser] AS [IDUser], 
+    [Game01].[TotalGames] AS [TotalGames], 
+    [Game01].[BestScore] AS [BestScore]
+    FROM [dbo].[Game01] AS [Game01]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Game02" EntityType="Self.Game02" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Game02].[IDTable] AS [IDTable], 
+    [Game02].[IDUser] AS [IDUser], 
+    [Game02].[TotalGames] AS [TotalGames], 
+    [Game02].[BestScore] AS [BestScore]
+    FROM [dbo].[Game02] AS [Game02]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Game03" EntityType="Self.Game03" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Game03].[IDTable] AS [IDTable], 
+    [Game03].[IDUser] AS [IDUser], 
+    [Game03].[TotalGames] AS [TotalGames], 
+    [Game03].[BestScore] AS [BestScore]
+    FROM [dbo].[Game03] AS [Game03]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Game04" EntityType="Self.Game04" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Game04].[IDTable] AS [IDTable], 
+    [Game04].[IDUser] AS [IDUser], 
+    [Game04].[TotalGames] AS [TotalGames], 
+    [Game04].[BestScore] AS [BestScore]
+    FROM [dbo].[Game04] AS [Game04]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Game05" EntityType="Self.Game05" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Game05].[IDTable] AS [IDTable], 
+    [Game05].[IDUser] AS [IDUser], 
+    [Game05].[TotalGames] AS [TotalGames], 
+    [Game05].[BestScore] AS [BestScore]
+    FROM [dbo].[Game05] AS [Game05]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MemoryCardsGame" EntityType="Self.MemoryCardsGame" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MemoryCardsGame].[IDTable] AS [IDTable], 
+    [MemoryCardsGame].[IDUser] AS [IDUser], 
+    [MemoryCardsGame].[TotalGames] AS [TotalGames], 
+    [MemoryCardsGame].[BestScore] AS [BestScore]
+    FROM [dbo].[MemoryCardsGame] AS [MemoryCardsGame]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SnakeGame" EntityType="Self.SnakeGame" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SnakeGame].[IDTable] AS [IDTable], 
+    [SnakeGame].[IDUser] AS [IDUser], 
+    [SnakeGame].[TotalGames] AS [TotalGames], 
+    [SnakeGame].[BestScore] AS [BestScore]
+    FROM [dbo].[SnakeGame] AS [SnakeGame]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Game01__IDUser__1B0907CE" Association="Self.FK__Game01__IDUser__1B0907CE">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="Game01" EntitySet="Game01" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Game02__IDUser__1CF15040" Association="Self.FK__Game02__IDUser__1CF15040">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="Game02" EntitySet="Game02" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Game03__IDUser__117F9D94" Association="Self.FK__Game03__IDUser__117F9D94">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="Game03" EntitySet="Game03" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Game04__IDUser__1367E606" Association="Self.FK__Game04__IDUser__1367E606">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="Game04" EntitySet="Game04" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Game05__IDUser__15502E78" Association="Self.FK__Game05__IDUser__15502E78">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="Game05" EntitySet="Game05" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MemoryCar__IDUse__1920BF5C" Association="Self.FK__MemoryCar__IDUse__1920BF5C">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="MemoryCardsGame" EntitySet="MemoryCardsGame" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SnakeGame__IDUse__173876EA" Association="Self.FK__SnakeGame__IDUse__173876EA">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="SnakeGame" EntitySet="SnakeGame" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
